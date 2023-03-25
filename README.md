@@ -116,3 +116,13 @@ public class d : MonoBehaviour
 
 
 ```
+변수 rigid에 rigidbody 속성부여
+```
+Rigidbody rigid;
+    void Start()
+    {
+        rigid =GetComponent<Rigidbody>();
+    }
+
+
+```
