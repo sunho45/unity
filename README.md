@@ -125,6 +125,9 @@ Rigidbody rigid;
         rigid.velocity = Vector3.left;//왼쪽 방향으로 이동
         rigid.velocity = Vector3.right; //오른쪽 방향으로 
     }
-
+void FixedUpdate()
+    {
+        
+    }// 속력 관련해서는 fixedupdate에 써야 한다.
 
 ```
