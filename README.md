@@ -122,6 +122,8 @@ Rigidbody rigid;
     void Start()
     {
         rigid =GetComponent<Rigidbody>();
+        rigid.velocity = Vector3.left;//왼쪽 방향으로 이동
+        rigid.velocity = Vector3.right; //오른쪽 방향으로 
     }
 
 
