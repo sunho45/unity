@@ -132,3 +132,29 @@ void FixedUpdate()
     }// 속력 관련해서는 fixedupdate에 써야 한다.
 
 ```
+물체에 힘을 
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class move : MonoBehaviour
+{
+    Rigidbody rigid;
+    void Start()
+    {
+        rigid =GetComponent<Rigidbody>();
+       
+    }
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Debug.Log(3);
+            rigid.AddForce(Vector3.up * 5, ForceMode.Impulse);
+        }
+    }
+}
+```
