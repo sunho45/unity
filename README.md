@@ -158,3 +158,43 @@ public class move : MonoBehaviour
     }
 }
 ```
+점프까지 가능한 점핑 볼
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Player : MonoBehaviour
+{
+    Rigidbody rt;
+    // Start is called before the first frame update
+    void Awake()
+    {
+        rt=GetComponent<Rigidbody>();
+    }
+    private void Update()
+    {
+        if (Input.anyKeyDown)
+        {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                rt.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+            }
+        }
+    }
+
+    void FixedUpdate()
+    {
+        float h = Input.GetAxisRaw("Horizontal");
+
+
+        float v = Input.GetAxisRaw("Vertical");
+        
+
+        rt.AddForce(new Vector3(h, 0, v),ForceMode.Impulse);
+
+    }
+}
+
+
+```
