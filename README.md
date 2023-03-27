@@ -198,3 +198,27 @@ public class Player : MonoBehaviour
 
 
 ```
+
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Camera : MonoBehaviour
+{
+    Transform tr;
+    Vector3 offset;
+    void Awake()
+    {
+        tr = GameObject.FindGameObjectWithTag("Player").transform;
+        offset = transform.position -tr.position;
+    }
+
+    // Update is called once per frame
+    void LateUpdate()
+    {
+        transform.position = tr.position+offset;
+    }
+}
+
+```
